@@ -10,9 +10,13 @@ export const shortenAddress = (address: `0x${string}`, charsNumber: number) => {
 };
 
 export const formatBigNumberToFixed = (numberToFormat: BigNumberish, decimalsToShow: number) => {
-  const decimals = 18;
-  const formattedString = formatUnits(numberToFormat, decimals);
-  return (+formattedString).toFixed(decimalsToShow);
+  try {
+    const decimals = 18;
+    const formattedString = formatUnits(numberToFormat, decimals);
+    return (+formattedString).toFixed(decimalsToShow);
+  } catch {
+    return '0';
+  }
 };
 
 export const convertToWei = (value: string | number, decimals = 18) => {
