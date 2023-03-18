@@ -36,6 +36,7 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
+    "bignumber.js": "^9.1.1",
     "ethers": "^5.7.2"
   },
   "files": [
