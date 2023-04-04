@@ -1,5 +1,5 @@
-import { Chain, Wallet } from '@rainbow-me/rainbowkit';
 import { InjectedConnector } from 'wagmi/connectors/injected';
+import { Chain, Wallet } from "./types/RainbowKit";
 
 export interface MyWalletOptions {
   chains: Chain[];
